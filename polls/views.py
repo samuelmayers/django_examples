@@ -5,7 +5,7 @@ from .models import Question, Choice
 
 
 def index(request):
-    latest_quesyion_list = Question.objects.all()
+    latest_question_list = Question.objects.all()
     context = {'latest_question_list': latest_question_list}
     return render(request, "polls/index.html", context)
 
