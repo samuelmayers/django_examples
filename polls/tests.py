@@ -96,7 +96,7 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             [question1, question2],
         )
-        
+
     def two_future_questions(self):
         """
         the quesions index page may display multiple questions
@@ -115,6 +115,7 @@ class QuestionDetailViewTests(TestCase):
         returns a 404 not found.
         """
         future_question = create_question(question_text='Future question.', days=5)
+        future_question.pk=3
         url = reverse('polls:detail', args=(future_question.id,))
         response = self.client.get(url)
         self.assertEqual(response.status_code, 404)
