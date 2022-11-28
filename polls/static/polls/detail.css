@@ -1,0 +1,32 @@
+
+form {
+    color: rgb(194, 247, 194);
+    -webkit-background-clip: text;
+    text-align: center;
+    list-style: none;
+    margin: 30px 0;
+    padding: 50px;
+    width: fit-content;
+    border: 1px solid white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+fieldset {
+    flex-direction: column;
+    
+}
+input[type="submit"] {
+    -webkit-text-fill-color: white;
+    background-color: hsl(205, 100%, 5%);
+    border: 1px solid white;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+input[type="submit"]:hover, input[type="submit"]:active {
+    background: linear-gradient(
+        to right, #182848, #4b6cb7
+    );
+}
